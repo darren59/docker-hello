@@ -19,4 +19,4 @@ Added the required steps below:
        password: ${{ secrets.DOCKER_PASSWORD }}
 
 ## 3: Test by editing Dockerfile
-Added a new line just to see if workflows will auto-trigger updated and check into DockerHub.
+Edited email to darren59@gmail.com in docker file.
