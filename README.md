@@ -13,38 +13,21 @@ Steps:
 
 `git clone https://github.com/u1i/docker-hello`
 
-## 2: Make changes
+## 2: Publish to Dockerhub
+Added the required steps below:
 
-modify index.html in the app directory
+1) Checks-out the repository, so our workflow can access it.
+2) Inserted the username, passowrd to log into Docker Hub.
+3) Edited setting, "secrets", inserted a) DOCKER_USER and b) DOCKER_PASSWORD with DOcker Hub username and password.
+ -
+    name: Checkout 
+    uses: actions/checkout@v2
+ -
+    name: Login to Docker Hub
+    uses: docker/login-action@v1
+    with:
+       username: ${{ secrets.DOCKER_USER }}
+       password: ${{ secrets.DOCKER_PASSWORD }}
 
-## 3: Build Container
-
-change into the directory: 
-`cd docker-hello`
-
-`docker build . -t myhello`
-
-## 4: Run Container
-
-`docker run -d -p 8080:8080 myhello`
-
-If you experience an error message, you may have another (the previous?) container running on the same port. In this case use this command to kill all running containers:
-
-`docker kill $(docker ps -q)`
-
-and then try again :-)
-
-## 5: Optional: Publish to Dockerhub
-
-For this you need to sign up at https://hub.docker.com/ – and get a little familiar with it as well. If you're completely new to this, please ignore this part for now.
-
-`docker tag myhello <YOUR_USERNAME>/hello:<VERSION_NUMBER>`
-
-`docker tag myhello <YOUR_USERNAME>/hello:latest`
-
-`docker login`
-
-`docker push <YOUR_USERNAME>/hello:<VERSION_NUMBER>`
-
-`docker push <YOUR_USERNAME>/hello:latest`
-
+## 3: Test by editing Dockerfile
+Added a new line just to see if workflows will auto-trigger updated and check into DockerHub.
