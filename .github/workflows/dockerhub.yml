@@ -34,7 +34,7 @@ jobs:
 
     - 
       name: Send mail
-        uses: darren59/action-send-mail@v3
+        uses: darren59/action-send-mail
       with:
         # Required mail server address:
         server_address: smtp.gmail.com
