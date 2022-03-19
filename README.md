@@ -19,4 +19,4 @@ Added the required steps below:
        password: ${{ secrets.DOCKER_PASSWORD }}
 
 ## 3: Test by editing Dockerfile
-Edited email to darren59@gmail.com in docker file.
+Made changes e.g. to my email addess instead and let GitHub actions check in Docker Hub.
