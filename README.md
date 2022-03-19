@@ -1,14 +1,3 @@
-# Hello World Docker Container
-
-pushed to [Docker Hub
-](https://hub.docker.com/r/u1ih/hello)
-
-Run with:
-
-`docker run -d -p 8080:8080 u1ih/hello`
-
-Steps:
-
 ## 1: Get Source
 
 `git clone https://github.com/u1i/docker-hello`
