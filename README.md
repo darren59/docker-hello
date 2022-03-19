@@ -1,6 +1,6 @@
 ## 1: Get Source
 
-`git clone https://github.com/u1i/docker-hello`
+`Forked https://github.com/u1i/docker-hello`
 
 ## 2: Publish to Dockerhub
 Added the required steps below:
