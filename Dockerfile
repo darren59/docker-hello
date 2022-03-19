@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER uli.hitzel@gmail.com
+MAINTAINER darren59@gmail.com
 EXPOSE 8080
 RUN apk update
 RUN apk add python2
